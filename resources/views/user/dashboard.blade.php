@@ -30,45 +30,15 @@
       <div class="container-fluid px-0">
   
         <!-- include bar -->
-        @include('include/admin/sidebar')
-        @include('include/admin/navbar')
+        @include('include/user/SideBar')
+        @include('include/user/NavBar')
     
+
 
 
         <div class="content">
           <div class="pb-5">
             <div class="row g-5">
-              <h3 class="text-primary">Modifier Profile</h3>
-              <hr>
-              @include('include/message')
-            <!--form profile-->
-            <form action="/Profile/Modidier" method="post">
-              @csrf
-              @foreach ($user as $u)
-              <div class="mb-3 row">
-                
-                  <label class="col-sm-2 col-form-label" for="inputPassword">Name</label>
-                  <div class="col-sm-10">
-                    <input value="{{$u->name}}" autocomplete="off" name="name" class="form-control" id="inputPassword" type="text">
-                  </div>
-                <label class="col-sm-2 col-form-label" for="inputPassword">Email</label>
-                <div class="col-sm-10">
-                  <input value="{{$u->email}}" class="form-control" name="email" id="inputPassword" type="email">
-                </div>
-                <label class="col-sm-2 col-form-label" for="inputPassword">Password</label>
-                <div class="col-sm-10">
-                  <input class="form-control" name="password" id="inputPassword" type="password">
-                </div>
-                <label class="col-sm-2 col-form-label" for="staticEmail">Role</label>
-                <div class="col-sm-10">
-                  <input class="form-control-plaintext outline-none" id="staticEmail" type="text" readonly="" value="Admin">
-                  <div class="mb-3 row"> </div>
-                </div>
-                <button class="btn btn-success" type="submit">Modifier</button>
-              </div>
-              @endforeach
-            </form>
-                <!--End form profile-->
             </div>
           </div>
           <footer class="footer">

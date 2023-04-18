@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\ComandesController;
   
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +58,11 @@ Route::get('/', [GuestController::class, 'home'])->name('/');
 Route::get('/Produit/Detail/{id}', [GuestController::class, 'ProduitsDetail']);
 Route::get('/Produit/Filter/{idcategorie}', [GuestController::class, 'Shop']);
 Route::post('/Produit/Search', [GuestController::class, 'Search']);
+//user  
+Route::get('User/Dashboard', [UserController::class, 'UserDashboard'])->name('UserDashboard')->middleware('auth');
+Route::get('/ProfileUser', [UserController::class, 'UserProfile'])->middleware('auth');
+Route::post('/ProfileUser/Modidier', [App\Http\Controllers\UserController::class, 'ModifierProfil'])->middleware('auth');
+Route::post('/AddCommande', [ComandesController::class, 'AddCommande'])->middleware('auth');
+Route::get('/ClientCart', [UserController::class, 'Cart'])->name('ClientCart')->middleware('auth');
+Route::get('/DeleteCommande/{idc}', [ComandesController::class, 'DeleteComande'])->middleware('auth');
+Route::post('/Check', [UserController::class, 'Check'])->middleware('auth');

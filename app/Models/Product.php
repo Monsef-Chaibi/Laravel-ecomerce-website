@@ -14,4 +14,8 @@ class Product extends Model
         return $this->blongsTo(Category::class,'id_categorie','id');
 
     }
+    function lignecommande(){
+        return $this->hasMany(lignecommande::class,'id_produit','id');
+    }
+
 }

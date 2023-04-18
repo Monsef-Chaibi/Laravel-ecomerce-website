@@ -42,4 +42,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    function commandes(){
+        return $this->hasMany(commandes::class,'id_user','id');
+    }
 }
