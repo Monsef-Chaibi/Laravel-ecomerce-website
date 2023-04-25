@@ -15,9 +15,8 @@
                         <h6>{{$p->prix}} $ </h6><h6 class="text-muted ml-2"><del>{{$p->prix+99}} $ </del></h6>
                     </div>
                 </div>
-                <div class="card-footer d-flex justify-content-between bg-light border">
+                <div class="d-flex justify-content-center card-footer bg-light border">
                     <a href="/Produit/Detail/{{$p->id}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                 </div>
             </div>
         </div>

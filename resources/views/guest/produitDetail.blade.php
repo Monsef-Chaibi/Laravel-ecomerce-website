@@ -8,7 +8,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -139,8 +140,7 @@
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="/Produit/Detail/{{$pr->id}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                        <a href="/Produit/Detail/{{$pr->id}}" style="justify-content: center" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                     </div>
                 </div>
             @endforeach     
@@ -170,6 +170,7 @@
 
     <!-- Template Javascript -->
     <script src="{{asset('mainassets/js/main.js')}}"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 </body>
 
 </html>

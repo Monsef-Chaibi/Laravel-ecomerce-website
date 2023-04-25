@@ -35,7 +35,7 @@ class ComandesController extends Controller
                 $lc->save();
             }
 
-            return redirect()->route('/')->with('countlignecommande',$countlignecommande);
+            return redirect()->route('/')->with('success','User modifie avec succes .....')->with('countlignecommande',$countlignecommande);
 
         }
         else{
@@ -49,7 +49,7 @@ class ComandesController extends Controller
             $lc->id_produit=$request->idproduit;
             $lc->id_commande=$commande->id;
             $lc->save();
-            return redirect()->route('/')->with('countlignecommande',$countlignecommande);
+            return redirect()->route('/')->with('success','User modifie avec succes .....')->with('countlignecommande',$countlignecommande);
         }
         else{
             return redirect()->back();

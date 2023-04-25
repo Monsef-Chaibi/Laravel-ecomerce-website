@@ -48,4 +48,20 @@ class HomeController extends Controller
         Auth::user()->update();
         return redirect('/Profile')->with('success','Admin modifie avec succes .....');
 }     
+    public function User(){
+        $user=User::where('is_admin', 0)->get();
+        return view('admin/client/index')->with('user',$user);
+    }
+    public function BlockUser($iduser){
+        $user=User::find($iduser);
+        $user->is_block=1;
+        $user->update();
+        return redirect()->back();
+    }
+    public function ActiveUser($iduser){
+        $user=User::find($iduser);
+        $user->is_block=0;
+        $user->update();
+        return redirect()->back();
+    }
 }

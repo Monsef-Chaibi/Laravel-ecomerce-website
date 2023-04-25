@@ -12,8 +12,11 @@
           <li class="nav-item"><a class="nav-link active" href="/admin/Categories">
               <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="cast"></span></span><span class="nav-link-text">Categories</span></div></a>
           </li>
-          <li class="nav-item"><a class="nav-link active" href="/admin/Categories">
+          <li class="nav-item"><a class="nav-link active" href="/UserDash">
             <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="cast"></span></span><span class="nav-link-text">Clients</span></div></a>
+        </li>
+          <li class="nav-item"><a class="nav-link active" href="/UserDash">
+            <div class="d-flex align-items-center"><span class="nav-link-icon"><span data-feather="cast"></span></span><span class="nav-link-text">Commandes</span></div></a>
         </li>
         </ul>
       </div>

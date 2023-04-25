@@ -36,8 +36,8 @@ class ProductController extends Controller
         $image = $request->file('image');
         $newname.=".". $image->getClientOriginalExtension();
         $destinationPath='Image_upload';
-        
         $produit->image=$newname;
+        
         if($produit->save())
         {
             $image->move($destinationPath, $newname);

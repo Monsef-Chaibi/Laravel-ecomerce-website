@@ -11,13 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comandes', function (Blueprint $table) {
+        Schema::create('facture', function (Blueprint $table) {
             $table->id();
-            $table->enum('etat',['En cours','payee'])->default('en cours');
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
-
+            $table->string('name1');
+            $table->string('name2');
+            $table->string('email');
+            $table->string('mob');
+            $table->string('adress');
+            $table->string('country');
+            $table->string('city');
+            $table->string('id_commande');
         });
     }
 
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comandes');
+        Schema::dropIfExists('facture');
     }
 };

@@ -10,7 +10,7 @@ class Product extends Model
     use HasFactory;
     public function categories(){
 
-
+        
         return $this->blongsTo(Category::class,'id_categorie','id');
 
     }

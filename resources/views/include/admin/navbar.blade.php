@@ -83,21 +83,14 @@
               <div class="card-body p-0 overflow-auto scrollbar" style="height: 18rem;">
                 <div class="text-center pt-4 pb-3">
                   <div class="avatar avatar-xl"><img class="rounded-circle" src="{{ asset('Image_upload/admin.png')}}" alt=""></div>
-                  <h6 class="mt-2">Jerry Seinfield</h6>
+                  <h6 class="mt-2">{{Auth::user()->name}}</h6>
                 </div>
-                <div class="mb-3 mx-3"><input class="form-control form-control-sm" id="statusUpdateInput" placeholder="Update your status"></div>
                 <ul class="nav d-flex flex-column mb-2 pb-1">
                   <li class="nav-item"><a class="nav-link px-3" href="/Profile"><span class="me-2 text-900" data-feather="user"></span>Profile</a></li>
-                  <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="pie-chart"></span>Dashboard</a></li>
-                  <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="lock"></span>Posts &amp; Activity</a></li>
-                  <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="settings"></span>Settings &amp; Privacy</a></li>
-                  <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="help-circle"></span>Help Center</a></li>
-                  <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="globe"></span>Language</a></li>
-                </ul>
+                   </ul>
               </div>
               <div class="card-footer p-0 border-top">
                 <ul class="nav d-flex flex-column my-3">
-                  <li class="nav-item"><a class="nav-link px-3" href="#!"><span class="me-2 text-900" data-feather="user-plus"></span>Add another account</a></li>
                 </ul>
                 <hr>
                 <div class="px-3">

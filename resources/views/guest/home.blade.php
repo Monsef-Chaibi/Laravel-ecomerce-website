@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
+    <title>EShopper </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -23,7 +23,18 @@
     <link href="{{asset('mainassets/lib/owlcarousel/assets/owl.carousel.min.css')}} " rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
+    
     <link href="{{asset('mainassets/css/style.css')}}" rel="stylesheet">
+
+
+    
+<!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
 </head>
 
 <body>

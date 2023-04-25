@@ -18,6 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
     <link href="{{asset('dashassets/css/phoenix.min.css') }}" rel="stylesheet" id="style-default">
     <link href="{{asset('dashassets/css/user.min.css') }}" rel="stylesheet" id="user-style-default">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <style>
       body {
         opacity: 0;
@@ -42,23 +45,16 @@
               <hr>
               @include('include/message')
             <!--form profile-->
-            <form action="/ProfileUser/Modidier" method="post">
-              @csrf
               <div class="mb-3 row">
-                
-                  <label class="col-sm-2 col-form-label" for="inputPassword">Name</label>
+                  <label class="col-sm-2 col-form-label my-3" for="inputPassword">Name</label>
                   <div class="col-sm-10">
-                    <input value="{{auth()->user()->name}}" autocomplete="off" name="name" class="form-control" id="inputPassword" type="text">
-                  </div>
-                <label class="col-sm-2 col-form-label" for="inputPassword">Email</label>
+                    <input value="{{auth()->user()->name}}" autocomplete="off"  readonly="" name="name" class="my-3 form-control outline-none" id="inputPassword" type="text">
+                  </div><br>
+                <label class="col-sm-2 col-form-label my-3" for="inputPassword">Email</label>
                 <div class="col-sm-10">
-                  <input value="{{auth()->user()->email}}" class="form-control" name="email" id="inputPassword" type="email">
+                  <input value="{{auth()->user()->email}}" class="my-3 form-control"  readonly="" name="email" id="inputPassword" type="email">
                 </div>
-                <label class="col-sm-2 col-form-label" for="inputPassword">Password</label>
-                <div class="col-sm-10">
-                  <input class="form-control" name="password" id="inputPassword" type="password">
-                </div>
-                <button class="btn btn-success" type="submit">Modifier</button>
+                <button class="btn btn-success my-3 col-sm-10 " style="margin-left: 17%"  data-bs-toggle="modal" data-bs-target="#verticallyCentered">Modifier</button>
               </div>
             </form>
                 <!--End form profile-->
@@ -82,3 +78,32 @@
   </body>
 
 </html>
+<div class="modal fade" id="verticallyCentered" tabindex="-1" aria-labelledby="verticallyCenteredModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="verticallyCenteredModalLabel">Modifier Profile</h5><button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs--1"></span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/ProfileUser/Modifier" method="post">
+          @csrf
+          <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label" for="inputPassword">Name</label>
+              <div class="col-sm-10">
+                <input value="{{auth()->user()->name}}" autocomplete="off"   name="name" class="form-control outline-none" id="inputPassword" type="text">
+              </div>
+            <label class="col-sm-2 col-form-label" for="inputPassword">Email</label>
+            <div class="col-sm-10">
+              <input value="{{auth()->user()->email}}" class="form-control"  name="email" id="inputPassword" type="email">
+            </div>
+            <label class="col-sm-2 col-form-label" for="inputPassword">Password</label>
+            <div class="col-sm-10">
+              <input class="form-control" name="password" id="inputPassword" type="password">
+            </div>
+          </div>
+          <div class="modal-footer"><button class="btn btn-primary" type="submit">Okay</button><button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Cancel</button></div>
+        </form>
+        </div>  
+      </div>
+    </div>
+</div>
