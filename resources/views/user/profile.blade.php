@@ -24,6 +24,7 @@
     <style>
       body {
         opacity: 0;
+        
       }
     </style>
   </head>
@@ -31,11 +32,11 @@
   <body>
     <main class="main" id="top">
       <div class="container-fluid px-0">
-  
+
         <!-- include bar -->
         @include('include/user/SideBar')
         @include('include/user/NavBar')
-    
+
 
 
         <div class="content">
@@ -103,7 +104,7 @@
           </div>
           <div class="modal-footer"><button class="btn btn-primary" type="submit">Okay</button><button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Cancel</button></div>
         </form>
-        </div>  
+        </div>
       </div>
     </div>
 </div>
