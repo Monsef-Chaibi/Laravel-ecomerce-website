@@ -12,18 +12,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-       
+
 $user = User::create([
     'name'=> 'monsef',
     'email' => 'xr.monsef@gmail.com',
     'email_verified_at' =>now(),
-    'password'=> Hash::make('123456'),
+    'password'=> Hash::make('monsef123'),
 ]);
 $user = User::create([
     'name'=> 'admin',
     'email' => 'admin@gmail.com',
     'email_verified_at' =>now(),
-    'password'=> Hash::make('123456'),
+    'password'=> Hash::make('admin123'),
     'is_admin' => 1,
 ]);
 
@@ -35,6 +35,6 @@ $user = User::create([
      */
     public function down(): void
     {
-     
+
     }
 };
